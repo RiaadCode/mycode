@@ -50,6 +50,10 @@ def is_match(user_input, accepted_answers, cutoff=0.82):
     1. If accepted answer looks numeric (all digits), compare digits-only equality.
     2. Exact normalized equality.
     3. Fuzzy match using difflib.SequenceMatcher ratio >= cutoff.
+
+    cutoff=0.82 was chosen to accept minor typos (e.g. "anapolis" for "annapolis")
+    while still rejecting clearly wrong answers. Lower values allow more typos;
+    higher values require a closer match.
     """
     user_raw = user_input or ""
     user_norm = normalize_answer(user_raw)
@@ -220,11 +224,12 @@ def show_score(score, total, missed, total_available):
 
     if missed:
         print("\nQuestions to review:")
+        # Show at most the first 10 missed questions to keep output readable
         for i, card, user in missed[:10]:
             print(f"  Q{i}: {card['question']}")
             print(f"    Correct: {card['answers'][0]}")
             if len(card["answers"]) > 1:
-                # show a couple of alternative acceptable forms
+                # Show up to 2 alternative acceptable forms to avoid a wall of text
                 extras = card["answers"][1:3]
                 print(f"    Also accepted: {', '.join(extras)}")
             print(f"    Your answer: {user}")
