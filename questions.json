@@ -1,42 +1,42 @@
 [
   {
     "question": "What is the capital city of Maryland?",
-    "answer": "annapolis"
+    "answers": ["annapolis", "annapolis, maryland"]
   },
   {
     "question": "What is the nickname of Maryland?",
-    "answer": "old line state"
+    "answers": ["old line state", "the old line state"]
   },
   {
     "question": "What large body of water is famous in Maryland?",
-    "answer": "chesapeake bay"
+    "answers": ["chesapeake bay", "the chesapeake bay", "chesapeake"]
   },
   {
     "question": "What is the state bird of Maryland?",
-    "answer": "baltimore oriole"
+    "answers": ["baltimore oriole", "oriole", "oriole (baltimore)"]
   },
   {
     "question": "What is the state flower of Maryland?",
-    "answer": "black-eyed susan"
+    "answers": ["black-eyed susan", "black eyed susan", "blackeyed susan"]
   },
   {
     "question": "What famous crab dish is Maryland known for?",
-    "answer": "crab cakes"
+    "answers": ["crab cakes", "crabcakes", "crab-cakes"]
   },
   {
     "question": "What is the name of Maryland's NFL football team?",
-    "answer": "ravens"
+    "answers": ["ravens", "baltimore ravens"]
   },
   {
     "question": "What is the name of Maryland's MLB baseball team?",
-    "answer": "orioles"
+    "answers": ["orioles", "baltimore orioles"]
   },
   {
     "question": "In what year did Maryland become a state?",
-    "answer": "1788"
+    "answers": ["1788"]
   },
   {
     "question": "What university, famous for medicine and research, is located in Baltimore?",
-    "answer": "johns hopkins"
+    "answers": ["johns hopkins", "johns hopkins university", "johns hopkins hospital"]
   }
 ]
