@@ -62,9 +62,9 @@ def is_match(user_input, accepted_answers, cutoff=0.82):
         a_norm = normalize_answer(a)
 
         # Numeric answer special-case: if the accepted answer contains at least one digit
-        if digits_only(a_norm):
-            if digits_only(user_norm) == digits_only(a_norm) and digits_only(a_norm) != "":
-                return True
+        a_digits = digits_only(a_norm)
+        if a_digits and digits_only(user_norm) == a_digits:
+            return True
 
         # Exact normalized match
         if user_norm == a_norm:
